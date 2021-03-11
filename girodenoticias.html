@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Giro de Noticias</title>
+   <!-- <link rel="stylesheet" href="styles.css"> --> 
+
+    <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("imgens/f-azul.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.total{
+    display: block;
+    position: absolute;
+    width: 850px;
+    height: 1000px;
+    top: 5%;
+    bottom: 5%;
+    background: rgba(184, 177, 177, 0.5);
+    box-shadow:rgba(155, 155, 206, 0.7) 2px 2px 2px 10px;
+}
+
+.text{
+    width: 750px;
+    position: relative;
+    left: 45px;
+    
+}
+
+.text h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-indent: 0px;
+}
+
+.text p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: white;
+    text-indent: 45px;
+    text-align: justify;
+    
+}
+
+.slider {
+    width: 750px;
+    height: 350px;
+    border-radius: 10px;
+    border: solid #ffff;
+    overflow: hidden;
+    position:relative;
+    display: block;
+    margin-top: 5%;
+    margin-left: 5%;
+
+}
+
+.slides {
+    width: 750px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 120%;
+    transition: 2s;
+}
+
+.txtimg{
+    position: absolute;
+    top: 150px;
+    width: 550px;
+    height: 90px;
+    border-radius: 10px;
+    background: rgba(49, 51, 48, 0.6);
+}
+
+.txtimg h1{
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-indent: 0px;
+}
+
+.txtimg p{
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: white;
+    text-indent: 45px;
+    text-align: justify;
+    
+}
+
+.slide img {
+    width: 753px;
+    height: 353px;
+}
+
+.navigation-manual{
+    width: 750px;
+    justify-content: center;
+    display: flex;
+}
+
+.manual-btn{
+    position: relative;
+    border: 2px solid #eaeff3;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    left: 230px;
+    top: -30px;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 10%;
+    
+    
+}
+.manual-btn:hover{
+    background: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -101%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -201%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -301%;
+}
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 750px;
+    justify-content: center;
+    margin-top: 460px;
+}
+ 
+.navigation-auto div{
+    border: 2px solid rgb(5, 4, 4);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio:checked ~ .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #ffff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #ffff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #ffff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #ffff;
+}
+
+
+    </style>
+     
+</head>
+
+<body>
+
+<div class="total">  
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+        
+            <div class="slide first">
+                <img src="imgens/new york.png" alt="">
+                <div class="txtimg">   
+                <h1>As cidades mais belas do mundo!</h1>
+                    <p>
+                        New York, a princezinha americana!
+                    </p>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <img src="imgens/sidney.png" alt="">
+                <div class="txtimg">   
+                <h1>As cidades mais belas do mundo!</h1>
+                    <p>
+                        Sidney, esbanja beleza!
+                    </p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="imgens/tokio.png" alt="">
+                <div class="txtimg">
+                <h1>As cidades mais belas do mundo!</h1>
+                    <p>
+                        Tókio, a mais tecnológica!
+                    </p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="imgens/amsterdan.png" alt="">
+                <div class="txtimg">                   
+                <h1>As cidades mais belas do mundo!</h1>
+                    <p>
+                        Amsterdan, tão bela e romantica!
+                    </p>
+                </div>    
+            </div>    
+
+            <div class="navigatio-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>    
+            </div>
+    
+            
+        </div>
+
+            <div class="navigatio-manual">
+                 <label for="radio1" class="manual-btn"></label>
+                 <label for="radio2" class="manual-btn"></label>
+                 <label for="radio3" class="manual-btn"></label>
+                 <label for="radio4" class="manual-btn"></label>
+            </div>
+    
+<script type="text/javascript">
+var counter=1;
+setInterval(function(){
+    document.getElementById('radio' + counter).checked=true; counter++;
+    if(counter > 4){
+        counter = 1;
+    }
+}, 5000); 
+</script>
+</div>
+<div class="text">
+<h1>Sociedade de Cultura Amigos em Ação</h1>
+<p>
+    A Sociedade Cultural Amigos em Ação, nasce da necessidade de ampliar o atendimento, que já vem sendo realizado com a ajuda da comunidade. 
+</p>
+<h1>Objetivos</h1>
+<p>
+    Levar ao maior número possive de cidadãos, ações sociais, no sentido de desenvolver o devir humano, não para que haja dependência, mas para que aprendam a viver em sociedade... Produzindo e compoartilhando, bens comuns a todos. Assim acabando com a dependência de governo e não só embusca de uma riqueza material e sim, também de uam riqueza social e espiritual. 
+</p>
+</div>
+
+</div>
+  </body>
+</html>
